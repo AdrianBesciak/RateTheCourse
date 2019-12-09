@@ -12,6 +12,8 @@
     background: #f4f4f4;
     padding: 10px;
     border-bottom: 1px #ccc dotted;
+    max-width: 300px;
+    min-height: 100px;
 }
 
 .is-complete {
