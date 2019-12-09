@@ -1,1 +1,9 @@
-<p>course works!</p>
+<div [ngClass]="setClasses()">
+        <p>
+            <input (change)="onToggle(course)" type="checkbox" />
+            {{ course.name }}
+            <button (click)="onDelete(course)" class="del">x</button>
+        </p>
+    </div>
+    
+    
