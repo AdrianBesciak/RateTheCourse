@@ -1,12 +1,10 @@
 .singleCourse {
-    max-width: auto;
     min-width: 200px;
-    float: left;
-    text-align: center;
+    text-align: left;
 }
 
 .logo {
-    width: 300px;
+    width: 100px;
 }
 
 .del {
