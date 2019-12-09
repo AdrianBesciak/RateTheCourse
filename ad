@@ -1,0 +1,12 @@
+[33m27536f1[m[33m ([m[1;36mHEAD -> [m[1;32mcourse_component[m[33m)[m added buttons
+[33m25fc10e[m set courses list
+[33m93aaa9f[m added images to courses
+[33m6cb2fbe[m added zebra presentation of the courses list
+[33m37fa20c[m showed course components on the website
+[33m4b7f107[m[33m ([m[1;32mcourse_module[m[33m)[m added COURSE component
+[33maae7b1e[m updated app.component.html
+[33m4bc12fb[m fixed bugs in courses.component.ts
+[33m85b765b[m added COURSES component and filled .ts file
+[33m5f181f8[m added Course class
+[33m413707b[m[33m ([m[1;32mmaster[m[33m)[m Removed template website and added style.css
+[33ma5fc8ee[m initial commit

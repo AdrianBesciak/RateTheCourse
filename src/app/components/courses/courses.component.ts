@@ -22,7 +22,9 @@ export class CoursesComponent implements OnInit {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 1
+        courseRate : 1,
+        img : 'assets/img/wdi.png',
+        isOpened:false
       },
       {
         name : 'Wprowadzenie do systemu UNIX',
@@ -33,7 +35,9 @@ export class CoursesComponent implements OnInit {
         laboratory : true,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 2
+        courseRate : 2,
+        img : 'assets/img/wdsu.png',
+        isOpened:false
       },
       {
         name : 'Kompetencje interpersonalne',
@@ -44,7 +48,9 @@ export class CoursesComponent implements OnInit {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 3
+        courseRate : 3,
+        img : 'assets/img/ki.jpg',
+        isOpened:false
       },
       {
         name : 'Analiza matematyczna 1',
@@ -55,7 +61,9 @@ export class CoursesComponent implements OnInit {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 4
+        courseRate : 4,
+        img : 'assets/img/analiza.jpg',
+        isOpened:false
       },
       {
         name : 'Algebra',
@@ -66,7 +74,9 @@ export class CoursesComponent implements OnInit {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 5
+        courseRate : 5,
+        img : 'assets/img/algebra.jpg',
+        isOpened:false
       },
       {
         name : 'Matematyka dyskretna',
@@ -77,7 +87,9 @@ export class CoursesComponent implements OnInit {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 1
+        courseRate : 1,
+        img : 'assets/img/dyskretna.png',
+        isOpened:false
       },
       {
         name : 'Algorytmy i struktury danych',
@@ -88,7 +100,9 @@ export class CoursesComponent implements OnInit {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 2
+        courseRate : 2,
+        img : 'assets/img/asd.png',
+        isOpened:false
       },
       {
         name : 'Programowanie imperatywne',
@@ -99,7 +113,9 @@ export class CoursesComponent implements OnInit {
         laboratory : true,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 3
+        courseRate : 3,
+        img : 'assets/img/pi.png',
+        isOpened:false
       },
       {
         name : 'Fizyka 1',
@@ -110,7 +126,9 @@ export class CoursesComponent implements OnInit {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 4
+        courseRate : 4,
+        img : 'assets/img/fizyka.png',
+        isOpened:false
       },
       {
         name : 'Ochrona własności intelektualnej',
@@ -121,9 +139,12 @@ export class CoursesComponent implements OnInit {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 5
+        courseRate : 5,
+        img : 'assets/img/owi.jpg',
+        isOpened:false
       }
     ]
+    console.log(this.courses[0].img);
   }
 
 }
