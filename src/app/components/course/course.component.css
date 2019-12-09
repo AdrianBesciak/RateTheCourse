@@ -1,5 +1,4 @@
 .singleCourse {
-    min-width: 200px;
     text-align: left;
 }
 
@@ -19,10 +18,14 @@
 
 .course {
     background: #f4f4f4;
-    padding: 10px;
     border-bottom: 1px #ccc dotted;
 }
 
-.is-complete {
-    text-decoration: line-through;
+
+.oddTest{
+    background-color: grey;
+}
+
+.evenTest{
+    background-color: linen;
 }

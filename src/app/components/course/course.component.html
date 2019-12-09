@@ -1,8 +1,7 @@
 <div [ngClass]="setClasses()" class="singleCourse">
-        <button (click)="clicked(course)">
+        <button (click)="clicked(course)" [ngClass]="{'oddTest':isEven, 'evenTest': !isEven}">
                 <img src={{course.img}} class="logo" />
                 {{ course.name }}
-                <button (click)="onDelete(course)" class="del">x</button>
         </button>
 </div>
 
