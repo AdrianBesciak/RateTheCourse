@@ -1,3 +1,14 @@
+.singleCourse {
+    max-width: auto;
+    min-width: 200px;
+    float: left;
+    text-align: center;
+}
+
+.logo {
+    width: 300px;
+}
+
 .del {
     background: #f00;
     color: #fff;
@@ -12,8 +23,6 @@
     background: #f4f4f4;
     padding: 10px;
     border-bottom: 1px #ccc dotted;
-    max-width: 300px;
-    min-height: 100px;
 }
 
 .is-complete {

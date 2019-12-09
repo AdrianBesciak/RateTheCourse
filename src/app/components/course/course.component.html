@@ -1,5 +1,6 @@
-<div [ngClass]="setClasses()">
-        <input (change)="onToggle(course)" type="checkbox" />
+<div [ngClass]="setClasses()" class="singleCourse">
+        <img src={{course.img}} class="logo" />
+        <br>
         {{ course.name }}
         <button (click)="onDelete(course)" class="del">x</button>
 </div>

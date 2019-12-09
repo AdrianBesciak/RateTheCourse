@@ -8,4 +8,5 @@ export class Course {
     project:boolean;
     maxAmountOfStudents:number;
     courseRate:number;
+    img:string;
 }
