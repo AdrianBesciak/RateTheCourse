@@ -19,8 +19,10 @@ export class CourseComponent implements OnInit {
     console.log('set classes');
   }
 
-  onToggle(course) {
-    console.log('course opened');
+  clicked(course) {
+    console.log('course set to');
+    course.isOpened = !course.isOpened;
+    console.log(course.isOpened);
   }
 
   onDelete(course) {

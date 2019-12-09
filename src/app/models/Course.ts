@@ -9,4 +9,5 @@ export class Course {
     maxAmountOfStudents:number;
     courseRate:number;
     img:string;
+    isOpened:boolean;
 }

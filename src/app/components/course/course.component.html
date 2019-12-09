@@ -1,5 +1,5 @@
 <div [ngClass]="setClasses()" class="singleCourse">
-        <button (click)="onClick(course)">
+        <button (click)="clicked(course)">
                 <img src={{course.img}} class="logo" />
                 {{ course.name }}
                 <button (click)="onDelete(course)" class="del">x</button>
