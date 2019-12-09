@@ -1,0 +1,8 @@
+<div [ngClass]="setClasses()" class="singleCourse">
+        <button (click)="clicked(course)" [ngClass]="{'oddTest':isEven, 'evenTest': !isEven}">
+                <img src={{course.img}} class="logo" />
+                {{ course.name }}
+        </button>
+</div>
+
+    

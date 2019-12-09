@@ -1,0 +1,31 @@
+.singleCourse {
+    text-align: left;
+}
+
+.logo {
+    width: 100px;
+}
+
+.del {
+    background: #f00;
+    color: #fff;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 50%;
+    cursor: pointer;
+    float: right;
+}
+
+.course {
+    background: #f4f4f4;
+    border-bottom: 1px #ccc dotted;
+}
+
+
+.oddTest{
+    background-color: grey;
+}
+
+.evenTest{
+    background-color: linen;
+}
