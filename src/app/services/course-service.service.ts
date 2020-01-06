@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class CourseServiceService {
 
   constructor() { }
@@ -139,6 +141,6 @@ export class CourseServiceService {
         img : 'assets/img/owi.jpg',
         isOpened:false
       }
-    ]
+    ];
   }
 }
