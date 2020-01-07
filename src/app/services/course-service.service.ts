@@ -92,7 +92,7 @@ export class CourseServiceService {
       {
         name : 'Algorytmy i struktury danych',
         ects : 6,
-        semester : 1,
+        semester : 2,
         lecture : true,
         exercises : true,
         laboratory : false,
@@ -105,7 +105,7 @@ export class CourseServiceService {
       {
         name : 'Programowanie imperatywne',
         ects : 5,
-        semester : 1,
+        semester : 2,
         lecture : true,
         exercises : false,
         laboratory : true,
@@ -118,7 +118,7 @@ export class CourseServiceService {
       {
         name : 'Fizyka 1',
         ects : 6,
-        semester : 1,
+        semester : 2,
         lecture : true,
         exercises : true,
         laboratory : false,
@@ -131,7 +131,7 @@ export class CourseServiceService {
       {
         name : 'Ochrona własności intelektualnej',
         ects : 3,
-        semester : 1,
+        semester : 2,
         lecture : true,
         exercises : false,
         laboratory : false,
