@@ -1,1 +1,7 @@
-<p>sign-in works!</p>
+<form [formGroup]="modelForm">
+    <label>Email:</label><input name="email" formControlName="email">
+    <br>
+    <label>Password:</label><input name="password" formControlName="password">
+    <br>
+    <button type="submit">Zaloguj się</button>
+</form>

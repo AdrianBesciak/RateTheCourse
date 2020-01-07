@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-sign-in',
