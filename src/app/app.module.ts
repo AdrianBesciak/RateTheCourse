@@ -8,6 +8,8 @@ import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { CourseRatingComponent } from './components/course-rating/course-rating.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HeaderComponent } from './components/header/header.component';
     CourseComponent,
     CourseDetailsComponent,
     CourseRatingComponent,
-    HeaderComponent
+    HeaderComponent,
+    SignInComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
