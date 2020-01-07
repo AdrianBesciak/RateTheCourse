@@ -1,9 +1,6 @@
 Lista kursów dostępnych na kierunku Informatyka:
 <br>
-<ul>
-    <div *ngFor="let course of courses, index as i, even as isEven" [ngClass]="{'oddTest':isEven, 'evenTest': !isEven}">
-        <li> 
-            <app-course  [course]="course"></app-course>
-        </li>
-    </div>
-</ul>
+
+<div *ngFor="let course of courses, index as i, even as isEven" [ngClass]="{'oddTest':isEven, 'evenTest': !isEven}">
+        <app-course  [course]="course"></app-course>
+</div>

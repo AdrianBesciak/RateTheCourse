@@ -1,9 +1,15 @@
 .singleCourse {
     text-align: left;
+    background: transparent;
+    min-height: 150px;
 }
 
 .logo {
     width: 100px;
+    float: left;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .del {
@@ -29,4 +35,17 @@
 
 .evenTest{
     background-color: linen;
+}
+
+.name {
+    float: left;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 20px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.rating {
+    margin-top: 20px;
 }

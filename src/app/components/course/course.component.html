@@ -1,8 +1,17 @@
 <div [ngClass]="setClasses()" class="singleCourse">
-        <button (click)="clicked(course)" [ngClass]="{'oddTest':isEven, 'evenTest': !isEven}">
+        <div (click)="clicked(course)">
                 <img src={{course.img}} class="logo" />
-                {{ course.name }}
-        </button>
+
+                <div class="name" >
+                        {{ course.name }}
+                </div>
+
+                <app-course-rating></app-course-rating>
+        </div>
+        <div *ngIf="course.isOpened" >
+                <app-course-details [course]="course" class="rating"></app-course-details>
+        </div>
+
 </div>
 
     
