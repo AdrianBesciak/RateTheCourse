@@ -1,10 +1,13 @@
 .singleCourse {
     text-align: left;
     background: transparent;
+    min-height: 100px;
 }
 
 .logo {
     width: 100px;
+    float: left;
+    cursor: pointer;
 }
 
 .del {
@@ -30,4 +33,12 @@
 
 .evenTest{
     background-color: linen;
+}
+
+.name {
+    float: left;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 20px;
+    cursor: pointer;
 }
