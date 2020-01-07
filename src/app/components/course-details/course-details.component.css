@@ -1,5 +1,7 @@
 .details {
+    clear: both;
     background: rgb(215, 226, 115);
+    padding: 20px;
 }
 
 .table {
