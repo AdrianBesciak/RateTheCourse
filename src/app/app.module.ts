@@ -7,6 +7,7 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { CourseRatingComponent } from './components/course-rating/course-rating.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CourseRatingComponent } from './components/course-rating/course-rating.
     CoursesComponent,
     CourseComponent,
     CourseDetailsComponent,
-    CourseRatingComponent
+    CourseRatingComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
