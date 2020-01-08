@@ -1,12 +1,18 @@
-<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
- <label>Imię:</label><input name="firstname" formControlName="firstname">
- <br>
- <label>Nazwisko:</label><input name="lastname" formControlName="lastname">
- <br>
- <label>Numer indeksu:</label><input name="index" formControlName="index">
- <br>
- <label>Semestr:</label><input name="semester" formControlName="semester">
- <br>
- 
- <button type="submit">Zarejestruj się</button>
-</form>
+<div class="field">
+    <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+        <label>Email:</label><input name="email" formControlName="email">
+        <br>
+        <label>Hasło:</label><input name="password" formControlName="password">
+        <br>
+        <label>Imię:</label><input name="firstname" formControlName="firstname">
+        <br>
+        <label>Nazwisko:</label><input name="lastname" formControlName="lastname">
+        <br>
+        <label>Numer indeksu:</label><input name="index" formControlName="index">
+        <br>
+        <label>Semestr:</label><input name="semester" formControlName="semester">
+        <br>
+        
+        <button type="submit">Zarejestruj się</button>
+    </form>
+</div>
