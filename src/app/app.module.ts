@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './components/courses/courses.component';
@@ -11,6 +12,11 @@ import { CourseRatingComponent } from './components/course-rating/course-rating.
 import { HeaderComponent } from './components/header/header.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { RegisterComponent } from './components/register/register.component';
+
+//Firebase:
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,9 @@ import { RegisterComponent } from './components/register/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
