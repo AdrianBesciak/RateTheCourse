@@ -1,9 +1,12 @@
-<div class="field">
-    <form [formGroup]="modelForm">
-        <label>Email:</label><input name="email" formControlName="email">
-        <br>
-        <label>Password:</label><input name="password" formControlName="password">
-        <br>
-        <button type="submit">Zaloguj się</button>
-    </form>
+<div class="container">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <!--<input id="email" type="text" class="form-control" placeholder="email" >-->
+        <input type="text" [formControl]="email" placeholder="email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Hasło:</label>
+        <input type="password" [formControl]="password" placeholder="hasło">
+    </div>
+    <button type="submit" class="btn btn-default" (click)="signIn()">Zaloguj się</button>
 </div>

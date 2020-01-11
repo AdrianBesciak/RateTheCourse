@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { AuthenticationService } from '../../services/authentication.service';
+import { FormControl } from '@angular/forms';
 
 
 
@@ -9,10 +10,21 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
+  email = new FormControl('');
+  password = new FormControl('');
 
-  constructor() { }
+
+  constructor(
+    private authenticationService: AuthenticationService
+  ) { }
 
   ngOnInit() {
+  }
+
+  signIn() {
+    this.authenticationService.SignIn(this.email.value, this.password.value); //zjebane sciaganie danych z html
+    //this.email = '';
+    //this.password = '';
   }
 
 }
