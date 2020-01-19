@@ -6,11 +6,7 @@
         </div>
 
         <app-course-rating></app-course-rating>
-        <button (click)="clicked(course)">Przejdź do kursu</button>
-      
-        <div *ngIf="course.isOpened" >
-                <app-course-details [course]="course" class="rating"></app-course-details>
-        </div>
+        <button (click)="clicked(course)" routerLink="course">Przejdź do kursu</button>
 
 </div>
 

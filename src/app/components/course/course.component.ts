@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../../models/Course';
+import { OpenedCourseService } from '../../services/opened-course.service';
 
 @Component({
   selector: 'app-course',
@@ -9,7 +10,8 @@ import { Course } from '../../models/Course';
 export class CourseComponent implements OnInit {
   @Input() course: Course;
 
-  constructor() { }
+
+  constructor(private openedCourse: OpenedCourseService) { }
 
   ngOnInit() {
   }
@@ -23,6 +25,7 @@ export class CourseComponent implements OnInit {
     console.log('course set to');
     course.isOpened = !course.isOpened;
     console.log(course.isOpened);
+    this.openedCourse.setOpenedCourse(course);
   }
 
   onDelete(course) {

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../../models/Course';
+import { OpenedCourseService } from '../../services/opened-course.service';
 
 @Component({
   selector: 'app-course-details',
@@ -7,11 +8,12 @@ import { Course } from '../../models/Course';
   styleUrls: ['./course-details.component.css']
 })
 export class CourseDetailsComponent implements OnInit {
-  @Input() course: Course;
+  course: Course;
 
-  constructor() { }
+  constructor(private courseToShow: OpenedCourseService) { }
 
   ngOnInit() {
+    this.course = this.courseToShow.getOpenedCourse();
   }
 
 }
