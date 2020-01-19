@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../../models/Course';
 import { OpenedCourseService } from '../../services/opened-course.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-details',
@@ -10,10 +11,9 @@ import { OpenedCourseService } from '../../services/opened-course.service';
 export class CourseDetailsComponent implements OnInit {
   course: Course;
 
-  constructor(private courseToShow: OpenedCourseService) { 
-    if (this.courseToShow == null) {
-      console.log('change site to main');
-    }
+  constructor(private courseToShow: OpenedCourseService,
+    private router: Router) { 
+    
   }
 
   ngOnInit() {

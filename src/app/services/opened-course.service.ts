@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Course } from '../models/Course';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -7,9 +8,16 @@ import { Course } from '../models/Course';
 export class OpenedCourseService {
   course: Course;
 
-  constructor() { }
+  constructor(private router:Router) { 
+    
+  }
+
 
   getOpenedCourse() {
+    if (this.course == null) {
+      this.router.navigateByUrl('');
+      return;
+    }
     return this.course;
   }
 
