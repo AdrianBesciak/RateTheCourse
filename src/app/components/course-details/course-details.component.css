@@ -22,3 +22,9 @@
     margin-left: 20px;
     margin-top: 75px;
 }
+
+.returnButton {
+    float: right;
+    margin-right: auto;
+    margin-left: 10px;
+}

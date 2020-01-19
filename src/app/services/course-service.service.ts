@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Course } from '../models/Course';
 
 
 @Injectable({
@@ -6,11 +7,10 @@ import { Injectable } from '@angular/core';
 })
 
 export class CourseServiceService {
+  courses: Array<Course>;
 
-  constructor() { }
-
-  getCourses() {
-    return [
+  constructor() { 
+    this.courses = [
       {
         shortName: "wdi",
         name : 'Wstęp do Informatyki',
@@ -152,5 +152,9 @@ export class CourseServiceService {
         isOpened:false
       }
     ];
+  }
+
+  getCourses() {
+    return this.courses;
   }
 }
