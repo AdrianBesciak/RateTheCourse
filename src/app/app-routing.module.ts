@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', component: CoursesComponent},
   {path: 'signIn', component: RegisterComponent},
   {path: 'register', component: SignInComponent},
-  {path: 'course', component: CourseDetailsComponent},
+  {path: 'course/:id', component: CourseDetailsComponent},
   {path: '**', component: CoursesComponent}
 ];
 

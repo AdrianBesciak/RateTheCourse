@@ -6,7 +6,7 @@
         </div>
 
         <app-course-rating></app-course-rating>
-        <button (click)="clicked(course)" routerLink="course">Przejdź do kursu</button>
+        <button (click)="clicked(course)" routerLink="course/{{this.indexInCourses}}">Przejdź do kursu</button>
         <button (click)="onDelete(course)" >Usuń</button>
 
 </div>

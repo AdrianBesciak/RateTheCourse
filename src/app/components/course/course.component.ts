@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../../models/Course';
-import { OpenedCourseService } from '../../services/opened-course.service';
 import { CourseServiceService } from '../../services/course-service.service';
 
 @Component({
@@ -10,12 +9,13 @@ import { CourseServiceService } from '../../services/course-service.service';
 })
 export class CourseComponent implements OnInit {
   @Input() course: Course;
+  indexInCourses: number;
 
 
-  constructor(private openedCourse: OpenedCourseService,
-    private courseService: CourseServiceService) { }
+  constructor(private courseService: CourseServiceService) { }
 
   ngOnInit() {
+    this.indexInCourses = this.courseService.getCourses().indexOf(this.course);
   }
 
   //set Dynamic Classes
@@ -27,7 +27,6 @@ export class CourseComponent implements OnInit {
     console.log('course set to');
     course.isOpened = !course.isOpened;
     console.log(course.isOpened);
-    this.openedCourse.setOpenedCourse(course);
   }
 
   onDelete(course) {

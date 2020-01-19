@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../../models/Course';
-import { OpenedCourseService } from '../../services/opened-course.service';
 import { Router } from '@angular/router';
+import { CourseServiceService } from '../../services/course-service.service';
 
 @Component({
   selector: 'app-course-details',
@@ -11,13 +11,15 @@ import { Router } from '@angular/router';
 export class CourseDetailsComponent implements OnInit {
   course: Course;
 
-  constructor(private courseToShow: OpenedCourseService,
-    private router: Router) { 
+  constructor(private router: Router,
+              private courseService: CourseServiceService) { 
     
   }
 
   ngOnInit() {
-    this.course = this.courseToShow.getOpenedCourse();
+    //this.course = this.courseToShow.getOpenedCourse();
+    this.course = this.courseService.getCourse(+this.router.url.split('/', 3)[2]);
+    console.log(this.router.url.split('/', 3)[2]);
   }
 
 }
