@@ -4,6 +4,21 @@
     padding: 20px;
 }
 
+.logo {
+    width: 200px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 .table {
     margin-left: 50px;
+}
+
+.name {
+    float: left;
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 75px;
 }

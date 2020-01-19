@@ -10,7 +10,11 @@ import { OpenedCourseService } from '../../services/opened-course.service';
 export class CourseDetailsComponent implements OnInit {
   course: Course;
 
-  constructor(private courseToShow: OpenedCourseService) { }
+  constructor(private courseToShow: OpenedCourseService) { 
+    if (this.courseToShow == null) {
+      console.log('change site to main');
+    }
+  }
 
   ngOnInit() {
     this.course = this.courseToShow.getOpenedCourse();

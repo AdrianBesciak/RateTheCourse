@@ -1,27 +1,34 @@
 <div class="details">
-    <h3>Semestr: {{ this.course.semester }} </h3>
-    <p>
-        Ilość punktów ECTS: {{this.course.ects}}
-        <br>
-        Formy prowadzenia zajęć:
-    </p>
-    <div class="table">
-        <table>
-            <tr>
-                <td>Wykład</td> <td><div *ngIf="this.course.lecture; else elseBlock">Tak</div><ng-template #elseBlock>Nie</ng-template></td>
-            </tr>
-            <tr>
-                <td>Ćwiczenia audytoryjne</td> <td><div *ngIf="this.course.exercises; else elseBlock">Tak</div><ng-template #elseBlock>Nie</ng-template></td>
-            </tr>
-            <tr>
-                <td>Ćwiczenia laboratoryjne</td> <td><div *ngIf="this.course.laboratory; else elseBlock">Tak</div><ng-template #elseBlock>Nie</ng-template></td>
-            </tr>
-            <tr>
-                <td>Projekt</td> <td><div *ngIf="this.course.project; else elseBlock">Tak</div><ng-template #elseBlock>Nie</ng-template></td>
-            </tr>
-        </table>
+    <img src={{course.img}} class="logo" />
+    <div class="name">
+        {{ this.course.name }}
     </div>
-    <p>
-        Maksymalna ilość studentów: {{this.course.maxAmountOfStudents}}
-    </p>
+    <app-course-rating></app-course-rating>
+    <div class="details">
+        <h3>Semestr: {{ this.course.semester }} </h3>
+        <p>
+            Ilość punktów ECTS: {{this.course.ects}}
+            <br>
+            Formy prowadzenia zajęć:
+        </p>
+        <div class="table">
+            <table>
+                <tr>
+                    <td>Wykład</td> <td><div *ngIf="this.course.lecture; else elseBlock">Tak</div><ng-template #elseBlock>Nie</ng-template></td>
+                </tr>
+                <tr>
+                    <td>Ćwiczenia audytoryjne</td> <td><div *ngIf="this.course.exercises; else elseBlock">Tak</div><ng-template #elseBlock>Nie</ng-template></td>
+                </tr>
+                <tr>
+                    <td>Ćwiczenia laboratoryjne</td> <td><div *ngIf="this.course.laboratory; else elseBlock">Tak</div><ng-template #elseBlock>Nie</ng-template></td>
+                </tr>
+                <tr>
+                    <td>Projekt</td> <td><div *ngIf="this.course.project; else elseBlock">Tak</div><ng-template #elseBlock>Nie</ng-template></td>
+                </tr>
+            </table>
+        </div>
+        <p>
+            Maksymalna ilość studentów: {{this.course.maxAmountOfStudents}}
+        </p>
+    </div>
 </div>
