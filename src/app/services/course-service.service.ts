@@ -157,4 +157,9 @@ export class CourseServiceService {
   getCourses() {
     return this.courses;
   }
+
+  deleteCourse(course: Course) {
+    this.courses.splice(this.courses.indexOf(course), 1);
+    
+  }
 }

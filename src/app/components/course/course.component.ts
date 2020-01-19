@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../../models/Course';
 import { OpenedCourseService } from '../../services/opened-course.service';
+import { CourseServiceService } from '../../services/course-service.service';
 
 @Component({
   selector: 'app-course',
@@ -11,7 +12,8 @@ export class CourseComponent implements OnInit {
   @Input() course: Course;
 
 
-  constructor(private openedCourse: OpenedCourseService) { }
+  constructor(private openedCourse: OpenedCourseService,
+    private courseService: CourseServiceService) { }
 
   ngOnInit() {
   }
@@ -30,6 +32,7 @@ export class CourseComponent implements OnInit {
 
   onDelete(course) {
     console.log('delete');
+    this.courseService.deleteCourse(course);
   }
 
 }
