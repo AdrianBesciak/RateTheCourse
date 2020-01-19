@@ -7,7 +7,6 @@
 .logo {
     width: 100px;
     float: left;
-    cursor: pointer;
     margin-top: 20px;
     margin-left: 20px;
 }
@@ -18,7 +17,6 @@
     border: none;
     padding: 5px 9px;
     border-radius: 50%;
-    cursor: pointer;
     float: right;
 }
 
@@ -26,6 +24,10 @@
     background: #f4f4f4;
     padding: 10px;
     border-bottom: 1px #ccc dotted;
+}
+
+.button {
+    cursor: pointer;
 }
 
 
@@ -42,7 +44,6 @@
     font-size: 30px;
     font-weight: 600;
     margin-left: 20px;
-    cursor: pointer;
     margin-top: 50px;
 }
 

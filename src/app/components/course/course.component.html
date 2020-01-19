@@ -1,13 +1,13 @@
 <div [ngClass]="setClasses()" class="singleCourse">
-        <div (click)="clicked(course)">
-                <img src={{course.img}} class="logo" />
+        <img src={{course.img}} class="logo" />
 
-                <div class="name" >
-                        {{ course.name }}
-                </div>
-
-                <app-course-rating></app-course-rating>
+        <div class="name" >
+                {{ course.name }}
         </div>
+
+        <app-course-rating></app-course-rating>
+        <button (click)="clicked(course)">Przejdź do kursu</button>
+      
         <div *ngIf="course.isOpened" >
                 <app-course-details [course]="course" class="rating"></app-course-details>
         </div>
