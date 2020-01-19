@@ -12,6 +12,7 @@ export class CourseServiceService {
   getCourses() {
     return [
       {
+        shortName: "wdi",
         name : 'Wstęp do Informatyki',
         ects : 6,
         semester : 1,
@@ -25,6 +26,7 @@ export class CourseServiceService {
         isOpened:false
       },
       {
+        shortName: "unix",
         name : 'Wprowadzenie do systemu UNIX',
         ects : 4,
         semester : 1,
@@ -38,6 +40,7 @@ export class CourseServiceService {
         isOpened:false
       },
       {
+        shortName: "ki",
         name : 'Kompetencje interpersonalne',
         ects : 3,
         semester : 1,
@@ -51,6 +54,7 @@ export class CourseServiceService {
         isOpened:false
       },
       {
+        shortName: "analiza1",
         name : 'Analiza matematyczna 1',
         ects : 6,
         semester : 1,
@@ -64,6 +68,7 @@ export class CourseServiceService {
         isOpened:false
       },
       {
+        shortName: "algebra",
         name : 'Algebra',
         ects : 6,
         semester : 1,
@@ -77,6 +82,7 @@ export class CourseServiceService {
         isOpened:false
       },
       {
+        shortName: "dyskretna",
         name : 'Matematyka dyskretna',
         ects : 5,
         semester : 1,
@@ -90,6 +96,7 @@ export class CourseServiceService {
         isOpened:false
       },
       {
+        shortName: "asd",
         name : 'Algorytmy i struktury danych',
         ects : 6,
         semester : 2,
@@ -103,6 +110,7 @@ export class CourseServiceService {
         isOpened:false
       },
       {
+        shortName: "pi",
         name : 'Programowanie imperatywne',
         ects : 5,
         semester : 2,
@@ -116,6 +124,7 @@ export class CourseServiceService {
         isOpened:false
       },
       {
+        shortName: "fizyka1",
         name : 'Fizyka 1',
         ects : 6,
         semester : 2,
@@ -129,6 +138,7 @@ export class CourseServiceService {
         isOpened:false
       },
       {
+        shortName: "owi",
         name : 'Ochrona własności intelektualnej',
         ects : 3,
         semester : 2,

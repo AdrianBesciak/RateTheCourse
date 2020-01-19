@@ -1,4 +1,5 @@
 export class Course {
+    shortName:string;
     name:string;
     ects:number;
     semester:number;
