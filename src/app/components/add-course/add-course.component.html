@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="form-group">
+        <label for="shortName">Skrót:</label>
+        <input type="text" [formControl]="shortName" placeholder="skrócona nazwa">
+    </div>
+    <div class="form-group">
+        <label for="name">Nazwa kursu:</label>
+        <input type="text" [formControl]="name" placeholder="name">
+    </div>
+    <div class="form-group">
+        <label for="ects">Ilość punktów ECTS</label>
+        <input type="text" [formControl]="ects" placeholder="ects">
+    </div>
+    <div class="form-group">
+        <label for="semester">Semestr</label>
+        <input type="text" [formControl]="semester" placeholder="Semestr (cyfra arabska)">
+    </div>
+    <p>Formy prowadzenia zajeć:</p>
+    <div class="form-group">
+        <label for="lecture">Wykład</label>
+        <input type="text" [formControl]="lecture" placeholder="1 jeśli jest prowadzony">
+    </div>
+    <div class="form-group">
+        <label for="exercises">Ćwiczenia audytoryjne</label>
+        <input type="text" [formControl]="exercises" placeholder="1 jeśli są prowadzone">
+    </div>
+    <div class="form-group">
+        <label for="laboratory">Laboratoria</label>
+        <input type="text" [formControl]="laboratory" placeholder="1 jeśli są prowadzone">
+    </div>
+    <div class="form-group">
+        <label for="project">Projekt</label>
+        <input type="text" [formControl]="project" placeholder="1 jeśli jest prowadzony">
+    </div>
+    <div class="form-group">
+        <label for="maxAmountOfStudents">Maksymalna ilość studentów</label>
+        <input type="text" [formControl]="maxAmountOfStudents" placeholder="Maksymalna ilość studentów">
+    </div>
+
+    <button type="submit" class="btn btn-default" (click)="addCourse()">Dodaj kurs</button>
+</div>

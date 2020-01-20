@@ -4,6 +4,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
+import { AddCourseComponent } from './components/add-course/add-course.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'signIn', component: RegisterComponent},
   {path: 'register', component: SignInComponent},
   {path: 'course/:id', component: CourseDetailsComponent},
+  {path: 'addCourse', component: AddCourseComponent},
   {path: '**', component: CoursesComponent}
 ];
 

@@ -165,4 +165,8 @@ export class CourseServiceService {
   deleteCourse(course: Course) {
     this.courses.splice(this.courses.indexOf(course), 1);
   }
+
+  addCourse(course: Course) {
+    this.courses.push(course);
+  }
 }
