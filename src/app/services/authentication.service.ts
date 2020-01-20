@@ -9,12 +9,14 @@ import { Router } from '@angular/router';
 })
 export class AuthenticationService {
   currentUserEmail: string;
+  isAdminLogged: boolean;
   userData: Observable<firebase.User>;
 
   constructor(private angularFireAuth: AngularFireAuth,
     private router: Router) {
     this.userData = angularFireAuth.authState;
     this.currentUserEmail = 'notLoggedIn';
+    this.isAdminLogged = false;
    }
 
 
@@ -33,6 +35,8 @@ export class AuthenticationService {
        console.log('You are succesfully logged in!');
        this.currentUserEmail = this.angularFireAuth.auth.currentUser.email;
        this.router.navigateByUrl('');
+       if (this.currentUserEmail.split('@', 2)[1] === 'admin.com')
+        this.isAdminLogged = true;
      }).catch(error => {
        console.log('Something is wron:', error.message);
      });
@@ -43,6 +47,7 @@ export class AuthenticationService {
    SignOut() {
      this.angularFireAuth.auth.signOut();
      this.currentUserEmail='notLoggedIn';
+     this.isAdminLogged = false;
      console.log('wylogowano');
 
    }
@@ -51,4 +56,10 @@ export class AuthenticationService {
     console.log(this.currentUserEmail); 
     return this.currentUserEmail;
    }
+
+   isCurrentUserAdmin(): boolean{
+     return this.isAdminLogged;
+   }
+
+
 }
