@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../../models/Course';
 import { Router } from '@angular/router';
 import { CourseServiceService } from '../../services/course-service.service';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-course-details',
@@ -12,7 +13,8 @@ export class CourseDetailsComponent implements OnInit {
   course: Course;
 
   constructor(private router: Router,
-              private courseService: CourseServiceService) { 
+              private courseService: CourseServiceService,
+              private auth: AuthenticationService) { 
     
   }
 

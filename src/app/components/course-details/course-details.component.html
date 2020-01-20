@@ -28,7 +28,9 @@
             </table>
         </div>
 
-        <app-rate-course></app-rate-course>
+        <div *ngIf="this.auth.loggedUserEmail() !== 'notLoggedIn'">
+            <app-rate-course></app-rate-course>
+        </div>
         <p>
             Maksymalna ilość studentów: {{this.course.maxAmountOfStudents}}
         </p>

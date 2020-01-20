@@ -24,6 +24,7 @@ export class AuthenticationService {
    SignUp(email: string, password: string) {
      this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password).then(res => {
        console.log('You are succesfully signed up!', res);
+       this.SignIn(email, password);
      }).catch(error => {
        console.log('Something is wrong', error.message);
      });
