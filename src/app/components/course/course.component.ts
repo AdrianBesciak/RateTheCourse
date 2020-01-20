@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../../models/Course';
 import { CourseServiceService } from '../../services/course-service.service';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-course',
@@ -12,7 +13,8 @@ export class CourseComponent implements OnInit {
   indexInCourses: number;
 
 
-  constructor(private courseService: CourseServiceService) { }
+  constructor(private courseService: CourseServiceService,
+    private auth: AuthenticationService) { }
 
   ngOnInit() {
     this.indexInCourses = this.courseService.getCourses().indexOf(this.course);
