@@ -4,6 +4,7 @@ import { CourseServiceService } from '../../services/course-service.service';
 import { Course } from '../../models/Course';
 import { Router } from '@angular/router';
 import { Rate } from '../../models/Rate';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-add-course',
@@ -23,10 +24,13 @@ export class AddCourseComponent implements OnInit {
   rate = new Rate();
 
   constructor(private courseService: CourseServiceService,
-    private router: Router) { }
+    private router: Router,
+    private auth: AuthenticationService) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+      if (!this.auth.isCurrentUserAdmin())
+        this.router.navigateByUrl('');
+    }
 
   addCourse() {
     if (this.lecture.value == 1)
