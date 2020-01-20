@@ -10,7 +10,10 @@
         <button id="signUp" name="signUp" routerLink="signIn" >Zarejestruj się</button>
     </div>
     <ng-template #elseBlock>
-        {{ this.auth.loggedUserEmail() }}    
+        {{ this.auth.loggedUserEmail() }}   
+        <div *ngIf="this.auth.isCurrentUserAdmin()">
+            Witamy panie Adminie!
+        </div>
         <button id="signOut" name="signOut" (click)="logout()" routerLink="" >Wyloguj się</button>
     </ng-template>
 
