@@ -12,4 +12,8 @@ export class CourseRatingComponent implements OnInit {
   ngOnInit() {
   }
 
+  clicked(num: number) {
+    console.log("JEST!!!" + num);
+  }
+
 }
