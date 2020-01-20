@@ -19,8 +19,8 @@ export class RateCourseComponent implements OnInit {
 
   clicked(rate: number) {
     console.log("rate: " + rate);
-   // this.rate.deleteRate
-   // this.service.updateCourseRate()
+   // this.rate.deleteRate  //uncomment when user is logged
+    this.service.getCourse(this.service.getIndexOfActualOpenedCourse()).courseRate.addRate(rate);
   }
 
 }

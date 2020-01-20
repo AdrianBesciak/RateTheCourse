@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Course } from '../models/Course';
 import { Rate } from '../models/Rate';
 import { Router } from '@angular/router';
+import { networkInterfaces } from 'os';
 
 
 @Injectable({
@@ -23,7 +24,7 @@ export class CourseServiceService {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 1,
+        courseRate : new Rate(),
         img : 'assets/img/wdi.png',
         isOpened:false
       },
@@ -37,7 +38,7 @@ export class CourseServiceService {
         laboratory : true,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 2,
+        courseRate : new Rate(),
         img : 'assets/img/wdsu.png',
         isOpened:false
       },
@@ -51,7 +52,7 @@ export class CourseServiceService {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 3,
+        courseRate : new Rate(),
         img : 'assets/img/ki.jpg',
         isOpened:false
       },
@@ -65,7 +66,7 @@ export class CourseServiceService {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 4,
+        courseRate : new Rate(),
         img : 'assets/img/analiza.jpg',
         isOpened:false
       },
@@ -79,7 +80,7 @@ export class CourseServiceService {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 5,
+        courseRate : new Rate(),
         img : 'assets/img/algebra.jpg',
         isOpened:false
       },
@@ -93,7 +94,7 @@ export class CourseServiceService {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 1,
+        courseRate : new Rate(),
         img : 'assets/img/dyskretna.png',
         isOpened:false
       },
@@ -107,7 +108,7 @@ export class CourseServiceService {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 2,
+        courseRate : new Rate(),
         img : 'assets/img/asd.png',
         isOpened:false
       },
@@ -121,7 +122,7 @@ export class CourseServiceService {
         laboratory : true,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 3,
+        courseRate : new Rate(),
         img : 'assets/img/pi.png',
         isOpened:false
       },
@@ -135,7 +136,7 @@ export class CourseServiceService {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 4,
+        courseRate : new Rate(),
         img : 'assets/img/fizyka.png',
         isOpened:false
       },
@@ -149,7 +150,7 @@ export class CourseServiceService {
         laboratory : false,
         project : false,
         maxAmountOfStudents : 300,
-        courseRate : 5,
+        courseRate : new Rate(),
         img : 'assets/img/owi.jpg',
         isOpened:false
       }
@@ -173,10 +174,10 @@ export class CourseServiceService {
   }
 
   updateCourseRate(rate: Rate) {
-    this.courses[this.getIndexOfActualOpenedCourse()].courseRate = rate.getRate();
+    this.courses[this.getIndexOfActualOpenedCourse()].courseRate = rate;
   }
 
-  private getIndexOfActualOpenedCourse() : number {
+  getIndexOfActualOpenedCourse() : number {
     return +this.router.url.split('/', 3)[2]
   }
 }

@@ -18,6 +18,9 @@ export class Rate {
     }
 
     getRate() : number {
-        return this.sumOfRates / this.countOfRates;
+        if (this.countOfRates == 0)
+            return 0;
+        else
+            return +(this.sumOfRates / this.countOfRates).toFixed(2);
     }
 }
