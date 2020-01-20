@@ -1,3 +1,9 @@
+.container {
+    background-color: palegreen;
+    padding: 30px;
+    text-align: center;
+}
+
 .field {
     background: palegoldenrod;
 }
@@ -12,4 +18,5 @@ label {
 
 button {
     font-size: 30px;
+    margin-top: 20px;
 }
