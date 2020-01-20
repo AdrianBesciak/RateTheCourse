@@ -13,11 +13,11 @@
         {{ this.auth.loggedUserEmail() }}   
         <div *ngIf="this.auth.isCurrentUserAdmin()">
             Witamy panie Adminie!
+            <button id="cockpit" name="cockpit" routerLink="adminsCockpit" >Administruj</button>
         </div>
         <button id="signOut" name="signOut" (click)="logout()" routerLink="" >Wyloguj się</button>
     </ng-template>
 
-    <button id="addCourse" name="addCourse" routerLink="addCourse" >Dodaj kurs</button>
 
     <div class="clear"></div>
 </header>
