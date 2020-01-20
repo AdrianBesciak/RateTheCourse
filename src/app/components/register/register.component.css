@@ -1,5 +1,7 @@
 .field {
     background: palegoldenrod;
+    padding: 30px;
+    text-align: center;
 }
 
 form {
@@ -13,4 +15,5 @@ label {
 
 button {
     font-size: 30px;
+    margin-top: 20px;
 }
