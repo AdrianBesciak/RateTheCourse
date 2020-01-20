@@ -1,4 +1,6 @@
+//component to show rate of the course
 import { Component, OnInit, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-course-rating',
@@ -11,10 +13,7 @@ export class CourseRatingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  clicked(rate: number) {
-    console.log("JEST!!!" + rate);
+    console.log("Rate: " +this.rate);
   }
 
 }

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Course } from '../models/Course';
+import { Rate } from '../models/Rate';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -9,7 +11,7 @@ import { Course } from '../models/Course';
 export class CourseServiceService {
   courses: Array<Course>;
 
-  constructor() { 
+  constructor(private router: Router) { 
     this.courses = [
       {
         shortName: "wdi",
@@ -168,5 +170,13 @@ export class CourseServiceService {
 
   addCourse(course: Course) {
     this.courses.push(course);
+  }
+
+  updateCourseRate(rate: Rate) {
+    this.courses[this.getIndexOfActualOpenedCourse()].courseRate = rate.getRate();
+  }
+
+  private getIndexOfActualOpenedCourse() : number {
+    return +this.router.url.split('/', 3)[2]
   }
 }

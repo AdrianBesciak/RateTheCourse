@@ -19,7 +19,10 @@ export class CourseDetailsComponent implements OnInit {
   ngOnInit() {
     //this.course = this.courseToShow.getOpenedCourse();
     this.course = this.courseService.getCourse(+this.router.url.split('/', 3)[2]);
-    console.log(this.router.url.split('/', 3)[2]);
+    //console.log(this.router.url.split('/', 3)[2]);
+    console.log(this.course.courseRate);
   }
+
+
 
 }

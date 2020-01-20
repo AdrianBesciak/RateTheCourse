@@ -1,4 +1,7 @@
+//component to rate course
 import { Component, OnInit, Input } from '@angular/core';
+import { CourseServiceService } from '../../services/course-service.service';
+import { Rate } from '../../models/Rate';
 
 @Component({
   selector: 'app-rate-course',
@@ -7,15 +10,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class RateCourseComponent implements OnInit {
-  @Input() rate : number;
+  @Input() rate : Rate;
 
-  constructor() { }
+  constructor(private service: CourseServiceService) { }
 
   ngOnInit() {
   }
 
   clicked(rate: number) {
-    console.log("JEST!!!" + rate);
+    console.log("rate: " + rate);
+   // this.rate.deleteRate
+   // this.service.updateCourseRate()
   }
 
 }

@@ -3,7 +3,7 @@
     <div class="name">
         {{ this.course.name }}
     </div>
-    <app-course-rating></app-course-rating>
+    <app-course-rating [rate]="this.course.courseRate" ></app-course-rating>
     <div class="details">
         <h3>Semestr: {{ this.course.semester }} </h3>
         <p>
