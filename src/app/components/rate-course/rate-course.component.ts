@@ -22,7 +22,8 @@ export class RateCourseComponent implements OnInit {
   clicked(rate: number) {
     console.log("rate: " + rate);
    // this.rate.deleteRate  //uncomment when user is logged
-    this.service.getCourse(this.service.getIndexOfActualOpenedCourse()).courseRate.addRate(rate, this.auth.currentUserEmail);
+    var communicate = this.service.getCourse(this.service.getIndexOfActualOpenedCourse()).courseRate.addRate(rate, this.auth.currentUserEmail);
+    console.log(communicate);
   }
 
 }

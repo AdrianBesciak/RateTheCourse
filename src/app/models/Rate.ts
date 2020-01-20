@@ -10,7 +10,7 @@ export class Rate {
         this.ratingHistory = new Array<RatingHistoryRecord>();
     }
 
-    addRate(rate : number, user: string) {
+    addRate(rate : number, user: string) : string {
         var flag : Boolean;
         flag = true;
         this.ratingHistory.forEach(element => {
@@ -22,6 +22,11 @@ export class Rate {
             this.ratingHistory.push(new RatingHistoryRecord(user, rate));
             this.sumOfRates = this.sumOfRates + rate;
             this.countOfRates = this.countOfRates + 1;
+            return 'Your vote is added';
+        }
+        else
+        {
+            return 'You have already voted';
         }
         
     }
