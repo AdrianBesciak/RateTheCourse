@@ -22,9 +22,13 @@ export class SignInComponent implements OnInit {
   }
 
   signIn() {
-    this.authenticationService.SignIn(this.email.value, this.password.value); //zjebane sciaganie danych z html
+    this.authenticationService.SignIn(this.email.value, this.password.value); 
     //this.email = '';
     //this.password = '';
+  }
+
+  checkUser() {
+    this.authenticationService.loggedUserEmail();
   }
 
 }

@@ -17,7 +17,7 @@ export class Rate {
         this.countOfRates = this.countOfRates - 1;
     }
 
-    getRate() : number {
+    getRate()  {
         if (this.countOfRates == 0)
             return 0;
         else

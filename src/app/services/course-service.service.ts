@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Course } from '../models/Course';
 import { Rate } from '../models/Rate';
 import { Router } from '@angular/router';
-import { networkInterfaces } from 'os';
 
 
 @Injectable({
