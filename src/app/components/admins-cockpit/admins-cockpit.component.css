@@ -1,0 +1,19 @@
+.cockpit {
+    background-color: palegreen;
+}
+
+.buttons {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding: 50px;
+
+
+}
+
+button {
+    height: 100px;
+    min-width: 300px;
+    cursor: pointer;
+    margin-right: 50px;
+}
