@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { CourseServiceService } from '../../services/course-service.service';
 import { Course } from '../../models/Course';
 import { Router } from '@angular/router';
+import { Rate } from '../../models/Rate';
 
 @Component({
   selector: 'app-add-course',
@@ -19,6 +20,7 @@ export class AddCourseComponent implements OnInit {
   laboratory = new FormControl('');
   project = new FormControl('');
   maxAmountOfStudents = new FormControl('');
+  rate = new Rate();
 
   constructor(private courseService: CourseServiceService,
     private router: Router) { }
@@ -46,9 +48,11 @@ export class AddCourseComponent implements OnInit {
       this.project.setValue(true);
     else 
       this.project.setValue(false);
+    
+    
       
     var course = new Course(this.shortName.value, this.name.value, this.ects.value, this.semester.value, this.lecture.value, 
-      this.exercises.value, this.laboratory.value, this.project.value, this.maxAmountOfStudents.value, 0,
+      this.exercises.value, this.laboratory.value, this.project.value, this.maxAmountOfStudents.value, this.rate,
        'assets/img/wdi.png', false);
     
     

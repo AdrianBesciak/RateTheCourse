@@ -1,3 +1,5 @@
+import {Rate} from './Rate';
+
 export class Course {
     shortName:string;
     name:string;
@@ -8,11 +10,11 @@ export class Course {
     laboratory:boolean;
     project:boolean;
     maxAmountOfStudents:number;
-    courseRate:number;
+    courseRate:Rate;
     img:string;
     isOpened:boolean;
 
-    constructor(shortName, name, ects, semester, lecture, exercises, laboratory, project, maxAmountOfStudents, courseRate, img, isOpened) {
+    constructor(shortName, name, ects, semester, lecture, exercises, laboratory, project, maxAmountOfStudents, courseRate : Rate, img, isOpened) {
         this.shortName = shortName;
         this.name = name;
         this.ects = ects;
