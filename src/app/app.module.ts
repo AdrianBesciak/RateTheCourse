@@ -21,7 +21,6 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AddCourseComponent } from './components/add-course/add-course.component';
 import { RateCourseComponent } from './components/rate-course/rate-course.component';
-import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +33,7 @@ import { LogoutComponent } from './components/logout/logout.component';
     SignInComponent,
     RegisterComponent,
     AddCourseComponent,
-    RateCourseComponent,
-    LogoutComponent
+    RateCourseComponent
   ],
   imports: [
     BrowserModule,

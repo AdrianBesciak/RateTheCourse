@@ -173,7 +173,7 @@ export class CourseServiceService {
   }
 
   updateCourseRate(rate: Rate) {
-    this.courses[this.getIndexOfActualOpenedCourse()].courseRate = rate;
+    this.courses[this.getIndexOfActualOpenedCourse()].courseRate = rate.getRate();
   }
 
   getIndexOfActualOpenedCourse() : number {

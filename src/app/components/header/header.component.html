@@ -11,7 +11,7 @@
     </div>
     <ng-template #elseBlock>
         {{ this.auth.loggedUserEmail() }}    
-        <button id="addCourse" name="addCourse" (click)="logout()" routerLink="" >Wyloguj się</button>
+        <button id="signOut" name="signOut" (click)="logout()" routerLink="" >Wyloguj się</button>
     </ng-template>
 
     <button id="addCourse" name="addCourse" routerLink="addCourse" >Dodaj kurs</button>
