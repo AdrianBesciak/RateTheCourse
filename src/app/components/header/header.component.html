@@ -4,9 +4,16 @@
             Oceń  przedmiot
         </p>
     </a>
-    <button id="addCourse" name="addCourse" (click)="logout()" routerLink="" >Wyloguj się</button>
-    <button id="logIn" name="logIn" routerLink="register" >Zaloguj się</button>
-    <button id="signUp" name="signUp" routerLink="signIn" >Zarejestruj się</button>
+    
+    <div *ngIf="this.auth.loggedUserEmail() === 'notLoggedIn'; else elseBlock">
+        <button id="logIn" name="logIn" routerLink="register" >Zaloguj się</button>
+        <button id="signUp" name="signUp" routerLink="signIn" >Zarejestruj się</button>
+    </div>
+    <ng-template #elseBlock>
+        {{ this.auth.loggedUserEmail() }}    
+        <button id="addCourse" name="addCourse" (click)="logout()" routerLink="" >Wyloguj się</button>
+    </ng-template>
+
     <button id="addCourse" name="addCourse" routerLink="addCourse" >Dodaj kurs</button>
 
     <div class="clear"></div>

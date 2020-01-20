@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import { EmailValidator } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,10 @@ export class AuthenticationService {
   currentUserEmail: string;
   userData: Observable<firebase.User>;
 
-  constructor(private angularFireAuth: AngularFireAuth) {
+  constructor(private angularFireAuth: AngularFireAuth,
+    private router: Router) {
     this.userData = angularFireAuth.authState;
-    this.currentUserEmail = '';
+    this.currentUserEmail = 'notLoggedIn';
    }
 
 
@@ -30,6 +32,7 @@ export class AuthenticationService {
      this.angularFireAuth.auth.signInWithEmailAndPassword(email, password).then(res => {
        console.log('You are succesfully logged in!');
        this.currentUserEmail = this.angularFireAuth.auth.currentUser.email;
+       this.router.navigateByUrl('');
      }).catch(error => {
        console.log('Something is wron:', error.message);
      });
@@ -39,12 +42,12 @@ export class AuthenticationService {
    //Sign out
    SignOut() {
      this.angularFireAuth.auth.signOut();
-     this.currentUserEmail='';
+     this.currentUserEmail='notLoggedIn';
      console.log('wylogowano');
 
    }
 
-   loggedUserEmail(){
+   loggedUserEmail(): string{
     console.log(this.currentUserEmail); 
     return this.currentUserEmail;
    }
