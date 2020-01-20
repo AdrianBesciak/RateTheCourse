@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-course-rating',
-  templateUrl: './course-rating.component.html',
-  styleUrls: ['./course-rating.component.css']
+  selector: 'app-rate-course',
+  templateUrl: './rate-course.component.html',
+  styleUrls: ['./rate-course.component.css']
 })
-export class CourseRatingComponent implements OnInit {
+
+export class RateCourseComponent implements OnInit {
   @Input() rate : number;
 
   constructor() { }

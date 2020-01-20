@@ -20,6 +20,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AddCourseComponent } from './components/add-course/add-course.component';
+import { RateCourseComponent } from './components/rate-course/rate-course.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AddCourseComponent } from './components/add-course/add-course.component
     HeaderComponent,
     SignInComponent,
     RegisterComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    RateCourseComponent
   ],
   imports: [
     BrowserModule,
