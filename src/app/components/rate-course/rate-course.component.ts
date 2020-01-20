@@ -2,6 +2,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseServiceService } from '../../services/course-service.service';
 import { Rate } from '../../models/Rate';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-rate-course',
@@ -12,7 +13,8 @@ import { Rate } from '../../models/Rate';
 export class RateCourseComponent implements OnInit {
   @Input() rate : Rate;
 
-  constructor(private service: CourseServiceService) { }
+  constructor(private service: CourseServiceService,
+    private auth: AuthenticationService) { }
 
   ngOnInit() {
   }
@@ -20,7 +22,7 @@ export class RateCourseComponent implements OnInit {
   clicked(rate: number) {
     console.log("rate: " + rate);
    // this.rate.deleteRate  //uncomment when user is logged
-    this.service.getCourse(this.service.getIndexOfActualOpenedCourse()).courseRate.addRate(rate);
+    this.service.getCourse(this.service.getIndexOfActualOpenedCourse()).courseRate.addRate(rate, this.auth.currentUserEmail);
   }
 
 }
