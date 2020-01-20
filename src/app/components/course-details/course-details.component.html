@@ -4,7 +4,7 @@
         {{ this.course.name }}
     </div>
     <app-course-rating [rate]="this.course.courseRate" ></app-course-rating>
-    <div class="details">
+    <div class="details"class="specificdetails">
         <h3>Semestr: {{ this.course.semester }} </h3>
         <p>
             Ilość punktów ECTS: {{this.course.ects}}
@@ -27,9 +27,12 @@
                 </tr>
             </table>
         </div>
+
+        <app-rate-course></app-rate-course>
         <p>
             Maksymalna ilość studentów: {{this.course.maxAmountOfStudents}}
         </p>
+        <button class="returnButton" routerLink="">Wróć do listy kursów</button>
+
     </div>
-    <button class="returnButton" routerLink="">Wróć do listy kursów</button>
 </div>

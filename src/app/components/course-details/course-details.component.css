@@ -2,6 +2,7 @@
     clear: both;
     background: rgb(215, 226, 115);
     padding: 20px;
+    min-height: 500px;
 }
 
 .logo {
@@ -11,13 +12,18 @@
     margin-left: 20px;
 }
 
-.table {
+table {
     margin-left: 50px;
+    float: left;
+}
+
+.specificdetails {
+    clear: both;
 }
 
 .name {
     float: left;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
     margin-left: 20px;
     margin-top: 75px;
@@ -28,3 +34,8 @@
     margin-right: auto;
     margin-left: 10px;
 }
+
+p {
+    clear: both;
+}
+
